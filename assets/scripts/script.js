@@ -11,9 +11,20 @@ function dateUpdate() {
     }, 1000);
 }
 function changeColors() {
-    colorUpdate = setInterval(function() {
-    //fill logic in later
-    }, 100);
+    var nine = document.getElementById("nine").getAttribute("data-test");
+    var ten = document.getElementById("ten").getAttribute("data-test");
+    var eleven = document.getElementById("eleven").getAttribute("data-test");
+    var twelve = document.getElementById("twelve").getAttribute("data-test");
+    var one = document.getElementById("one").getAttribute("data-test");
+    var two = document.getElementById("two").getAttribute("data-test");
+    var three = document.getElementById("three").getAttribute("data-test");
+    var four = document.getElementById("four").getAttribute("data-test");
+    var myArray = [nine, ten, eleven, twelve, one, two, three, four]
+    for (var i=0; i<myArray.length; i++) {
+        if (h < myArray[i]) {
+            //then what? :(
+        }
+    }
 }
 function loadData() {
     dateUpdate()
