@@ -3,20 +3,20 @@ var d = new Date();
 function dateUpdate() {
     dateUpdate = setInterval(function() {
         var d = new Date();
-        document.getElementById("date").innerHTML = d;
+        $("#date").html(d);
     }, 5);   
 }
 function loadData() {
     dateUpdate()
-    document.getElementById("nine").value = localStorage.getItem("nine");
-    document.getElementById("ten").value = localStorage.getItem("ten");
-    document.getElementById("eleven").value = localStorage.getItem("eleven");
-    document.getElementById("twelve").value = localStorage.getItem("twelve");
-    document.getElementById("one").value = localStorage.getItem("one");
-    document.getElementById("two").value = localStorage.getItem("two");
-    document.getElementById("three").value = localStorage.getItem("three");
-    document.getElementById("four").value = localStorage.getItem("four");
-    document.getElementById("five").value = localStorage.getItem("five");
+    $("#nine").val(localStorage.getItem("nine"));
+    $("#ten").val(localStorage.getItem("ten"));
+    $("#eleven").val(localStorage.getItem("eleven"));
+    $("#twelve").val(localStorage.getItem("twelve"));
+    $("#one").val(localStorage.getItem("one"));
+    $("#two").val(localStorage.getItem("two"));
+    $("#three").val(localStorage.getItem("three"));
+    $("#four").val(localStorage.getItem("four"));
+    $("#five").val(localStorage.getItem("five"));
 }
 function saveData() {
     localStorage.setItem("nine", $('#nine').val());
