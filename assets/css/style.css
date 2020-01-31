@@ -50,6 +50,20 @@ textarea {
   font-weight: bold;
   width: 10%;
 }
+.hourS {
+  background-color: red;
+  color: #000000;
+  text-align: left;
+  font-weight: bold;
+  width: 10%;
+}
+.hourS {
+  background-color: green;
+  color: #000000;
+  text-align: left;
+  font-weight: bold;
+  width: 10%;
+}
 .save {
   background-image: url("../images/save.png");
   background-repeat: no-repeat;

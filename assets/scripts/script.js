@@ -11,20 +11,61 @@ function dateUpdate() {
     }, 1000);
 }
 function changeColors() {
-    var nine = document.getElementById("nine").getAttribute("data-test");
-    var ten = document.getElementById("ten").getAttribute("data-test");
-    var eleven = document.getElementById("eleven").getAttribute("data-test");
-    var twelve = document.getElementById("twelve").getAttribute("data-test");
-    var one = document.getElementById("one").getAttribute("data-test");
-    var two = document.getElementById("two").getAttribute("data-test");
-    var three = document.getElementById("three").getAttribute("data-test");
-    var four = document.getElementById("four").getAttribute("data-test");
-    var myArray = [nine, ten, eleven, twelve, one, two, three, four]
-    for (var i=0; i<myArray.length; i++) {
-        if (h < myArray[i]) {
-            //then what? :(
-        }
+    if (h == document.getElementById("nine").getAttribute("data-test")) { 
+        document.getElementById("nine").classList.toggle("hourS");
     }
+    if (h == document.getElementById("ten").getAttribute("data-test")) { 
+        document.getElementById("ten").classList.toggle("hourS");
+    }
+    if (h == document.getElementById("eleven").getAttribute("data-test")) { 
+        document.getElementById("eleven").classList.toggle("hourS");
+    }
+    if (h == document.getElementById("twelve").getAttribute("data-test")) { 
+        document.getElementById("twelve").classList.toggle("hourS");
+    }
+    if (h == document.getElementById("one").getAttribute("data-test")) { 
+        document.getElementById("one").classList.toggle("hourS");
+    }
+    if (h == document.getElementById("two").getAttribute("data-test")) { 
+        document.getElementById("two").classList.toggle("hourS");
+    }
+    if (h == document.getElementById("three").getAttribute("data-test")) { 
+        document.getElementById("three").classList.toggle("hourS");
+    }
+    if (h == document.getElementById("four").getAttribute("data-test")) { 
+        document.getElementById("four").classList.toggle("hourS");
+    }
+    if (h == document.getElementById("five").getAttribute("data-test")) { 
+        document.getElementById("five").classList.toggle("hourS");
+    }
+    //testing
+    if (h < document.getElementById("nine").getAttribute("data-test")) { 
+        document.getElementById("nine").classList.toggle("hourS");
+    }
+    if (h < document.getElementById("ten").getAttribute("data-test")) { 
+        document.getElementById("ten").classList.toggle("hourS");
+    }
+    if (h < document.getElementById("eleven").getAttribute("data-test")) { 
+        document.getElementById("eleven").classList.toggle("hourS");
+    }
+    if (h < document.getElementById("twelve").getAttribute("data-test")) { 
+        document.getElementById("twelve").classList.toggle("hourS");
+    }
+    if (h < document.getElementById("one").getAttribute("data-test")) { 
+        document.getElementById("one").classList.toggle("hourS");
+    }
+    if (h < document.getElementById("two").getAttribute("data-test")) { 
+        document.getElementById("two").classList.toggle("hourS");
+    }
+    if (h < document.getElementById("three").getAttribute("data-test")) { 
+        document.getElementById("three").classList.toggle("hourS");
+    }
+    if (h < document.getElementById("four").getAttribute("data-test")) { 
+        document.getElementById("four").classList.toggle("hourS");
+    }
+    if (h < document.getElementById("five").getAttribute("data-test")) { 
+        document.getElementById("five").classList.toggle("hourS");
+    } 
 }
 function loadData() {
     dateUpdate()
