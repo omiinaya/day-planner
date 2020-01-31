@@ -8,12 +8,11 @@ function dateUpdate() {
     dateUpdate = setInterval(function() {
         var d = new Date();
         $("#date").html(d);
-        console.log(h);
     }, 1000);
 }
 function changeColors() {
     colorUpdate = setInterval(function() {
-        //fill logic later
+    //fill logic in later
     }, 100);
 }
 function loadData() {
