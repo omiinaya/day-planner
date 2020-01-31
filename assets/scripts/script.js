@@ -2,70 +2,99 @@ var d = new Date();
 var h = d.getHours();
 
 function dateUpdate() {
-    //one time outside so it doesnt take a full second to load.
     var d = new Date();
     $("#date").html(d);
     dateUpdate = setInterval(function() {
         var d = new Date();
         $("#date").html(d);
+        changeColors()
     }, 1000);
 }
 function changeColors() {
-    if (h == document.getElementById("nine").getAttribute("data-test")) { 
-        document.getElementById("nine").classList.toggle("hourS");
+    //future
+    if (h < $("#nine").attr("data-test")) {
+        $("#nine").css("background-color","#77dd77");
     }
-    if (h == document.getElementById("ten").getAttribute("data-test")) { 
-        document.getElementById("ten").classList.toggle("hourS");
+    if (h < $("#ten").attr("data-test")) { 
+        $("#ten").css("background-color","#77dd77");
     }
-    if (h == document.getElementById("eleven").getAttribute("data-test")) { 
-        document.getElementById("eleven").classList.toggle("hourS");
+    if (h < $("#eleven").attr("data-test")) { 
+        $("#eleven").css("background-color","#77dd77");
     }
-    if (h == document.getElementById("twelve").getAttribute("data-test")) { 
-        document.getElementById("twelve").classList.toggle("hourS");
+    if (h < $("#twelve").attr("data-test")) { 
+        $("#twelve").css("background-color","#77dd77");
     }
-    if (h == document.getElementById("one").getAttribute("data-test")) { 
-        document.getElementById("one").classList.toggle("hourS");
+    if (h < $("#one").attr("data-test")) { 
+        $("#one").css("background-color","#77dd77");
     }
-    if (h == document.getElementById("two").getAttribute("data-test")) { 
-        document.getElementById("two").classList.toggle("hourS");
+    if (h < $("#two").attr("data-test")) { 
+        $("#two").css("background-color","#77dd77");
     }
-    if (h == document.getElementById("three").getAttribute("data-test")) { 
-        document.getElementById("three").classList.toggle("hourS");
+    if (h < $("#three").attr("data-test")) { 
+        $("#three").css("background-color","#77dd77");
     }
-    if (h == document.getElementById("four").getAttribute("data-test")) { 
-        document.getElementById("four").classList.toggle("hourS");
+    if (h < $("#four").attr("data-test")) { 
+        $("#four").css("background-color","#77dd77");
     }
-    if (h == document.getElementById("five").getAttribute("data-test")) { 
-        document.getElementById("five").classList.toggle("hourS");
-    }
-    //testing
-    if (h < document.getElementById("nine").getAttribute("data-test")) { 
-        document.getElementById("nine").classList.toggle("hourS");
-    }
-    if (h < document.getElementById("ten").getAttribute("data-test")) { 
-        document.getElementById("ten").classList.toggle("hourS");
-    }
-    if (h < document.getElementById("eleven").getAttribute("data-test")) { 
-        document.getElementById("eleven").classList.toggle("hourS");
-    }
-    if (h < document.getElementById("twelve").getAttribute("data-test")) { 
-        document.getElementById("twelve").classList.toggle("hourS");
-    }
-    if (h < document.getElementById("one").getAttribute("data-test")) { 
-        document.getElementById("one").classList.toggle("hourS");
-    }
-    if (h < document.getElementById("two").getAttribute("data-test")) { 
-        document.getElementById("two").classList.toggle("hourS");
-    }
-    if (h < document.getElementById("three").getAttribute("data-test")) { 
-        document.getElementById("three").classList.toggle("hourS");
-    }
-    if (h < document.getElementById("four").getAttribute("data-test")) { 
-        document.getElementById("four").classList.toggle("hourS");
-    }
-    if (h < document.getElementById("five").getAttribute("data-test")) { 
-        document.getElementById("five").classList.toggle("hourS");
+    if (h < $("#five").attr("data-test")) { 
+        $("#five").css("background-color","#77dd77");
     } 
+    //present
+    if (h == $("#nine").attr("data-test")) { 
+        $("#nine").css("background-color","red");
+    }
+    if (h == $("#ten").attr("data-test")) { 
+        $("#ten").css("background-color","red");
+    }
+    if (h == $("#eleven").attr("data-test")) { 
+        $("#eleven").css("background-color","red");
+    }
+    if (h == $("#twelve").attr("data-test")) { 
+        $("#twelve").css("background-color","red");
+    }
+    if (h == $("#one").attr("data-test")) { 
+        $("#one").css("background-color","red");
+    }
+    if (h == $("#two").attr("data-test")) { 
+        $("#two").css("background-color","red");
+    }
+    if (h == $("#three").attr("data-test")) { 
+        $("#three").css("background-color","red");
+    }
+    if (h == $("#four").attr("data-test")) { 
+        $("#four").css("background-color","red");
+    }
+    if (h == $("#five").attr("data-test")) { 
+        $("#five").css("background-color","red");
+    }
+    //past
+    if (h > $("#nine").attr("data-test")) { 
+        $("#nine").css("background-color","#d3d3d3");
+    }
+    if (h > $("#ten").attr("data-test")) { 
+        $("#ten").css("background-color","#d3d3d3");
+    }
+    if (h > $("#eleven").attr("data-test")) { 
+        $("#eleven").css("background-color","#d3d3d3");
+    }
+    if (h > $("#twelve").attr("data-test")) { 
+        $("#twelve").css("background-color","#d3d3d3");
+    }
+    if (h > $("#one").attr("data-test")) { 
+        $("#one").css("background-color","#d3d3d3");
+    }
+    if (h > $("#two").attr("data-test")) { 
+        $("#two").css("background-color","#d3d3d3");
+    }
+    if (h > $("#three").attr("data-test"))  { 
+        $("#three").css("background-color","#d3d3d3");
+    }
+    if (h > $("#four").attr("data-test")) { 
+        $("#four").css("background-color","#d3d3d3");
+    }
+    if (h > $("#five").attr("data-test")) { 
+        $("#five").css("background-color","#d3d3d3");
+    }
 }
 function loadData() {
     dateUpdate()
