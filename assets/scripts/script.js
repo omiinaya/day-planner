@@ -1,4 +1,13 @@
+var d = new Date();
+
+function dateUpdate() {
+    dateUpdate = setInterval(function() {
+        var d = new Date();
+        document.getElementById("date").innerHTML = d;
+    }, 5);   
+}
 function loadData() {
+    dateUpdate()
     document.getElementById("nine").value = localStorage.getItem("nine");
     document.getElementById("ten").value = localStorage.getItem("ten");
     document.getElementById("eleven").value = localStorage.getItem("eleven");
