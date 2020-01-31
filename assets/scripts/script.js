@@ -1,10 +1,15 @@
 var d = new Date();
+var h = d.getHours();
 
 function dateUpdate() {
+    //one time outside so it doesnt take a full second to load.
+    var d = new Date();
+    $("#date").html(d);
     dateUpdate = setInterval(function() {
         var d = new Date();
         $("#date").html(d);
-    }, 5);   
+        console.log(h);
+    }, 1000);
 }
 function loadData() {
     dateUpdate()
