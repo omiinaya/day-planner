@@ -11,8 +11,14 @@ function dateUpdate() {
         console.log(h);
     }, 1000);
 }
+function changeColors() {
+    colorUpdate = setInterval(function() {
+        //fill logic later
+    }, 100);
+}
 function loadData() {
     dateUpdate()
+    changeColors()
     $("#nine").val(localStorage.getItem("nine"));
     $("#ten").val(localStorage.getItem("ten"));
     $("#eleven").val(localStorage.getItem("eleven"));
