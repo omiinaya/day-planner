@@ -98,6 +98,7 @@ function changeColors() {
     }
 }
 function loadData() {
+    dateCheck()
     intervalUpdate()
     changeColors()
     $("#nine").val(localStorage.getItem("nine"));
