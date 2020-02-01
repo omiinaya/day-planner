@@ -1,14 +1,15 @@
 var d = new Date();
 var h = d.getHours();
 
-function dateUpdate() {
-    var d = new Date();
-    $("#date").html(d);
-    dateUpdate = setInterval(function() {
-        var d = new Date();
-        $("#date").html(d);
+function intervalUpdate() {
+    intervalUpdate = setInterval(function() {
+        dateCheck()
         changeColors()
     }, 1000);
+}
+function dateCheck() {
+    var d = new Date();
+        $("#date").html(d);
 }
 function changeColors() {
     //future
@@ -97,7 +98,7 @@ function changeColors() {
     }
 }
 function loadData() {
-    dateUpdate()
+    intervalUpdate()
     changeColors()
     $("#nine").val(localStorage.getItem("nine"));
     $("#ten").val(localStorage.getItem("ten"));
