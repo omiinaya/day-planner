@@ -1,4 +1,4 @@
-# day-planner
+# day-planner | https://omiinaya.github.io/day-planner
 
 This is a day planner made using a dynamic HTML webpage, semantic tags, Javascript, CSS, JQuery and localStorage to store and retrieve user inputted values.
 
