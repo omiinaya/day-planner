@@ -4,62 +4,89 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
+    <meta name="description" content="Work Day Scheduler - Plan your day efficiently with color-coded time blocks and local storage support." />
+    <meta name="keywords" content="day planner, scheduler, calendar, productivity, workday" />
+    <meta name="theme-color" content="#007bff" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/style.css" />
-    <script src="assets/scripts/script.js"></script>
     <title>Work Day Scheduler</title>
+    <!-- Accessibility and SEO improvements -->
   </head>
-    <body onload="loadData()">
-      <header class="jumbotron">
-        <h1 class="display-3">Work Day Scheduler</h1>
-        <p>A simple calendar app for scheduling your work day</p>
-        <p id="date"></p>
-  </header>
-    <div class="container">
-      <ul>
+  <body onload="loadData()">
+    <header class="jumbotron" role="banner">
+      <h1 class="display-3">Work Day Scheduler</h1>
+      <p>A simple calendar app for scheduling your work day</p>
+      <p id="date" aria-live="polite"></p>
+    </header>
+    <main class="container" role="main">
+      <ul aria-label="Day schedule" class="pl-0">
+        <!-- Each time block is a list item with ARIA and label support -->
         <li>
-          <textarea class="hour" rows="4" readonly>9:00AM</textarea><textarea class="input" rows="4" id="nine" data-test="9"></textarea><textarea class="save" rows="4" onclick=saveData() readonly></textarea>
+          <label for="nine" class="sr-only">9:00AM</label>
+          <textarea class="hour" rows="4" readonly aria-hidden="true">9:00AM</textarea>
+          <textarea class="input" rows="4" id="nine" data-test="9" aria-label="9:00AM input"></textarea>
+          <button class="save" type="button" aria-label="Save 9:00AM" onclick="saveData('nine')" tabindex="0"></button>
         </li>
         <li>
-          <textarea class="hour" rows="4" readonly>10:00AM</textarea><textarea class="input" rows="4" id="ten" data-test="10"></textarea><textarea class="save" rows="4" onclick=saveData() readonly></textarea>
+          <label for="ten" class="sr-only">10:00AM</label>
+          <textarea class="hour" rows="4" readonly aria-hidden="true">10:00AM</textarea>
+          <textarea class="input" rows="4" id="ten" data-test="10" aria-label="10:00AM input"></textarea>
+          <button class="save" type="button" aria-label="Save 10:00AM" onclick="saveData('ten')" tabindex="0"></button>
         </li>
         <li>
-          <textarea class="hour" rows="4" readonly>11:00AM</textarea><textarea class="input" rows="4" id="eleven" data-test="11"></textarea><textarea class="save" rows="4" onclick=saveData() readonly></textarea>
+          <label for="eleven" class="sr-only">11:00AM</label>
+          <textarea class="hour" rows="4" readonly aria-hidden="true">11:00AM</textarea>
+          <textarea class="input" rows="4" id="eleven" data-test="11" aria-label="11:00AM input"></textarea>
+          <button class="save" type="button" aria-label="Save 11:00AM" onclick="saveData('eleven')" tabindex="0"></button>
         </li>
         <li>
-          <textarea class="hour" rows="4" readonly>12:00PM</textarea><textarea class="input" rows="4" id="twelve" data-test="12"></textarea><textarea class="save" rows="4" onclick=saveData() readonly></textarea>
+          <label for="twelve" class="sr-only">12:00PM</label>
+          <textarea class="hour" rows="4" readonly aria-hidden="true">12:00PM</textarea>
+          <textarea class="input" rows="4" id="twelve" data-test="12" aria-label="12:00PM input"></textarea>
+          <button class="save" type="button" aria-label="Save 12:00PM" onclick="saveData('twelve')" tabindex="0"></button>
         </li>
         <li>
-          <textarea class="hour" rows="4" readonly>1:00PM</textarea><textarea class="input" rows="4" id="one" data-test="13"></textarea><textarea class="save" rows="4" onclick=saveData() readonly></textarea>
+          <label for="one" class="sr-only">1:00PM</label>
+          <textarea class="hour" rows="4" readonly aria-hidden="true">1:00PM</textarea>
+          <textarea class="input" rows="4" id="one" data-test="13" aria-label="1:00PM input"></textarea>
+          <button class="save" type="button" aria-label="Save 1:00PM" onclick="saveData('one')" tabindex="0"></button>
         </li>
         <li>
-          <textarea class="hour" rows="4" readonly>2:00PM</textarea><textarea class="input" rows="4" id="two" data-test="14"></textarea><textarea class="save" rows="4" onclick=saveData() readonly></textarea>
+          <label for="two" class="sr-only">2:00PM</label>
+          <textarea class="hour" rows="4" readonly aria-hidden="true">2:00PM</textarea>
+          <textarea class="input" rows="4" id="two" data-test="14" aria-label="2:00PM input"></textarea>
+          <button class="save" type="button" aria-label="Save 2:00PM" onclick="saveData('two')" tabindex="0"></button>
         </li>
         <li>
-          <textarea class="hour" rows="4" readonly>3:00PM</textarea><textarea class="input" rows="4" id="three" data-test="15"></textarea><textarea class="save" rows="4" onclick=saveData() readonly></textarea>
+          <label for="three" class="sr-only">3:00PM</label>
+          <textarea class="hour" rows="4" readonly aria-hidden="true">3:00PM</textarea>
+          <textarea class="input" rows="4" id="three" data-test="15" aria-label="3:00PM input"></textarea>
+          <button class="save" type="button" aria-label="Save 3:00PM" onclick="saveData('three')" tabindex="0"></button>
         </li>
         <li>
-          <textarea class="hour" rows="4" readonly>4:00PM</textarea><textarea class="input" rows="4" id="four" data-test="16"></textarea><textarea class="save" rows="4" onclick=saveData() readonly></textarea>
+          <label for="four" class="sr-only">4:00PM</label>
+          <textarea class="hour" rows="4" readonly aria-hidden="true">4:00PM</textarea>
+          <textarea class="input" rows="4" id="four" data-test="16" aria-label="4:00PM input"></textarea>
+          <button class="save" type="button" aria-label="Save 4:00PM" onclick="saveData('four')" tabindex="0"></button>
         </li>
         <li>
-          <textarea class="hour" rows="4" readonly>5:00PM</textarea><textarea class="input" rows="4" id="five" data-test="17"></textarea><textarea class="save" rows="4" onclick=saveData() readonly></textarea>
+          <label for="five" class="sr-only">5:00PM</label>
+          <textarea class="hour" rows="4" readonly aria-hidden="true">5:00PM</textarea>
+          <textarea class="input" rows="4" id="five" data-test="17" aria-label="5:00PM input"></textarea>
+          <button class="save" type="button" aria-label="Save 5:00PM" onclick="saveData('five')" tabindex="0"></button>
         </li>
       </ul>
-    </div>
+    </main>
+    <div id="save-feedback" aria-live="polite" class="sr-only" tabindex="-1"></div>
+    <footer class="text-center mt-4" role="contentinfo">
+      <small>&copy; 2025 Work Day Scheduler. All rights reserved.</small>
+    </footer>
+    <!-- Scripts loaded at end for performance -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="assets/scripts/script.js"></script>
   </body>
 </html>

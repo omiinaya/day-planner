@@ -27,18 +27,36 @@ textarea {
 .input-disabled{
   background-color:#FFF !important;
 }
-.input {
-  width:70%;
-  background-color: #d3d3d3;
+li {
+  display: flex;
+  align-items: stretch;
+  padding: 0;
+  list-style-type: none;
+  margin-bottom: 8px;
 }
 .hour {
   background-color: #ffffff;
   color: #000000;
   text-align: right;
   font-weight: bold;
-  width: 10%;
+  width: 12%;
+  min-width: 80px;
+  max-width: 120px;
+  border-right: none;
+  border-radius: 0;
+}
+.input {
+  width: 76%;
+  min-width: 180px;
+  background-color: #d3d3d3;
+  border-radius: 0;
+  border-left: none;
+  border-right: none;
 }
 .save {
+  width: 12%;
+  min-width: 60px;
+  max-width: 80px;
   background-image: url("../images/save.png");
   background-repeat: no-repeat;
   background-size: 70%;
@@ -47,9 +65,20 @@ textarea {
   border-top-right-radius: 10%;
   border-bottom-right-radius: 10%;
   cursor: pointer;
-  width: 10%;
+  border-left: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-li {
-  padding: 0;
-  list-style-type: none;
+@media (max-width: 768px) {
+  li {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .hour, .input, .save {
+    width: 100%;
+    min-width: unset;
+    max-width: unset;
+    margin-bottom: 4px;
+  }
 }
